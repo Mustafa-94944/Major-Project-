@@ -1,0 +1,37 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<style>
+        table,
+thead,
+th,td {
+  color: white;
+  border: 1px solid black;
+}
+
+</style>
+<div class="col-sm-6 wow fadeInRight">
+    <h3 class="column-title">KEYSTROKE DYNAMICS SYSTEM AND FEATURES</h3>
+    <h4>Results</h4>
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <td>FAR</td>
+                <td>{{far}}</td>
+            </tr>
+            <tr>
+                <td>FRR</td>
+                <td>{{frr}}</td>
+            </tr>
+            <tr>
+                <td>ERR</td>
+                <td>{{err}}</td>
+            </tr>
+        </table>
+
+        {{rf|safe}}
+    </div>
+
+</div>
+
+{%endblock%}
